@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let btnAgregar = document.getElementById("btnAgregar");
 let btnClear = document.getElementById("btnClear");
 
@@ -94,10 +95,48 @@ btnAgregar.addEventListener("click", function(event) {
                txtNombre.focus();    
     }
 
+=======
+// El código va aquí -> 
+let btnAgregar = document.getElementById("btnAgregar");
+let btnClear = document.getElementById("btnClear");
+
+let txtNombre = document.getElementById("Name");
+let txtNumber = document.getElementById("Number");
+
+let alertValidaciones = document.getElementById("alertValidaciones");
+let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
+
+function validarCantidad(){
+    if(txtNumber.value.length==0){
+        return false;
+    }
+    return true;
+}
+
+btnAgregar.addEventListener("click", function(event){
+    event.preventDefault();
+    alertValidacionesTexto.innerHTML="";
+    alertValidaciones.style.display="none";
+    txtNombre.style.border="";
+    txtNumber.style.border="";
+    if (txtNombre.value.length <3){
+        alertValidacionesTexto.innerHTML="El <strong>Nombre</strong> no es correcto <br>"
+        alertValidaciones.style.display="block";
+        txtNombre.style.border="solid red medium";
+    }length <3
+
+    if (! validarCantidad()){
+        alertValidacionesTexto.innerHTML+="El <strong>Número</strong> no es correcto"
+        alertValidaciones.style.display="block";
+        txtNumber.style.border="solid red medium";
+    }
+
+>>>>>>> 34ffb9ca925ed615187f06b9741ad7796946ee9e
 });
 
 btnClear.addEventListener("click" , function(event){
     event.preventDefault();
+<<<<<<< HEAD
     txtNombre.value = "";
     txtNumber.value = "";
     alertValidacionesTexto.innerHTML="";
@@ -150,3 +189,10 @@ window.addEventListener("load", function(event){
   precioTotal.innerText= `$ ${costoTotal}`;
   precioTotal.innerText=`$ ${costoTotal.toFixed(2)}`;
 })
+=======
+
+    txtNombre.value = "";
+    txtNumber.value = "";
+
+});
+>>>>>>> 34ffb9ca925ed615187f06b9741ad7796946ee9e
